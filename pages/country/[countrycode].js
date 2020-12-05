@@ -92,7 +92,7 @@ export const getStaticPaths = async() => {
 
     const paths = countries.map(country=> {
         console.log(typeof(country.alpha3Code),country.alpha3Code,country.name)
-        return {params: {countryCode:country.alpha3Code.toString()}}
+        return {params: {countryCode:country.alpha3Code.toString().toLowerCase()}}
      } )
 
     return {
