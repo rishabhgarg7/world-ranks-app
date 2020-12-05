@@ -90,7 +90,7 @@ export const getStaticPaths = async() => {
     const res = await fetch("https://restcountries.eu/rest/v2/all");
     const countries = await res.json();
 
-    const paths = countries.map(country=> ({params: {countryCode:country.alpha3Code}}) )
+    const paths = countries.map(country=> ({params: {countryCode:country.alpha3Code.toString()}}) )
 
     return {
         paths: paths,
