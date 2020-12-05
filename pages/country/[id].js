@@ -12,7 +12,7 @@ const getCountry = async (id) => {
 
 export default function CountryPage({country}) {
     const router = useRouter()
-    const { countryCode }= router.query
+    const { id }= router.query
 
     return (
         <div className='country-page flex mt-8'>
@@ -92,7 +92,7 @@ export const getStaticPaths = async() => {
 
     const paths = countries.map(country=> {
         console.log(typeof(country.alpha3Code),country.alpha3Code,country.name)
-        return {params: {countryCode:country.alpha3Code.toString().toLowerCase()}}
+        return {params: {id:country.alpha3Code.toString().toLowerCase()}}
      } )
 
     return {
@@ -102,7 +102,7 @@ export const getStaticPaths = async() => {
 }
 
 export const getStaticProps = async ({ params }) => {
-    const country = await getCountry(params.countryCode);
+    const country = await getCountry(params.id);
   
     return {
       props: {
