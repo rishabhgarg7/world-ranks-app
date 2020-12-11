@@ -1,30 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Learnings:
 
-## Getting Started
+- The main and important thing I learned in this project is **What is client-side rendering, static rendering and server side rendering** and what's the difference between them.
+- Learned about dynamic routing and how to do it in nextJS using **[id]** approach in file-based routing.
+- Learned about the **Link** component in nextJS and how it makes the webapp faster by loading the page early on.
+- I learned about and implemented getStaticProps and getStaticPaths(static rendering) in nextJS.
+  - Basically, getStaticProps helps to build/generate the HTML for a page at the build time by storing the data needed for an page. The data that's being fetched is static(doesn't change with time).
+  - And getStaticPaths is used when we use dynamic routing for static pages or have many static pages, so nextJS require/need to know the paths of all of those pages so that it can build/generate the HTML for all of those pages at build time.
+- Learned how to do basic searching and filtering of many components in an webapp.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) deployed on [Vercel Platform.](https://vercel.com/)
